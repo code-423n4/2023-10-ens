@@ -58,22 +58,21 @@ Some of the checklists in this doc are for **C4 (🐺)** and some of them are fo
 ---
 
 # ENS audit details
-- Total Prize Pool: XXX XXX USDC (Notion: Total award pool)
-  - HM awards: XXX XXX USDC (Notion: HM (main) pool)
-  - Analysis awards: XXX XXX USDC (Notion: Analysis pool)
-  - QA awards: XXX XXX USDC (Notion: QA pool)
-  - Bot Race awards: XXX XXX USDC (Notion: Bot Race pool)
-  - Gas awards: XXX XXX USDC (Notion: Gas pool)
-  - Judge awards: XXX XXX USDC (Notion: Judge Fee)
-  - Lookout awards: XXX XXX USDC (Notion: Sum of Pre-sort fee + Pre-sort early bonus)
-  - Scout awards: $500 USDC (Notion: Scout fee - but usually $500 USDC)
-  - (this line can be removed if there is no mitigation) Mitigation Review: XXX XXX USDC (*Opportunity goes to top 3 certified wardens based on placement in this audit.*)
+- Total Prize Pool: $24,500 USDC 
+  - HM awards: $16,500 USDC 
+  - Analysis awards: $1,000 USDC 
+  - QA awards: $500 USDC 
+  - Bot Race awards: $1,500 USDC 
+  - Gas awards: $500 USDC
+  - Judge awards: $2,400 USDC 
+  - Lookout awards: $1,600 USDC 
+  - Scout awards: $500 USDC 
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2023-09-ens/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
-- Starts TBD XXX XXX XX 20:00 UTC (ex. `Starts March 22, 2023 20:00 UTC`)
-- Ends TBD XXX XXX XX 20:00 UTC (ex. `Ends March 30, 2023 20:00 UTC`)
-
+- Starts September 27, 2023 20:00 UTC 
+- Ends October 3, 2023 20:00 UTC
+  
 ## Automated Findings / Publicly Known Issues
 
 Automated findings output for the audit can be found [here](https://github.com/code-423n4/2023-09-ens/blob/main/bot-report.md) within 24 hours of audit opening.
@@ -134,6 +133,7 @@ Automated findings output for the audit can be found [here](https://github.com/c
 *Describe the project's main invariants (properties that should NEVER EVER be broken).*
 
 ## Scoping Details 
+
 [ ⭐️ SPONSORS: please confirm/edit the information below. ]
 
 ```
