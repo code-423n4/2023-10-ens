@@ -103,3 +103,12 @@ dist
 
 # TernJS port file
 .tern-port
+
+# governance contract related files
+artifacts
+cache
+deployments/localhost
+deployments/tenderly
+airdrops/tenderly
+api/airdrop.json
+.idea
