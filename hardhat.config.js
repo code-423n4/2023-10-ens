@@ -15,9 +15,6 @@ require('solidity-coverage');
 // https://github.com/motdotla/dotenv
 require('dotenv').config({ silent: true });
 
-// hardhat actions
-require('./tasks/maketree');
-
 real_accounts = undefined;
 if (process.env.DEPLOYER_KEY) {
   real_accounts = [process.env.DEPLOYER_KEY];
@@ -56,15 +53,6 @@ module.exports = {
       initialDate: config.UNLOCK_BEGIN,
       tags: ['test'],
       allowUnlimitedContractSize: true,
-    },
-    mainnet: {
-      url: 'http://localhost:8545/',
-      chainId: 1,
-      accounts: real_accounts,
-      maxPriorityFeePerGas: 1000000000,
-    },
-    tenderly: {
-      url: 'https://rpc.tenderly.co/fork/bd704e15-7f2c-4f12-8c1a-9bedf536c336',
-    },
+    }
   },
 };
