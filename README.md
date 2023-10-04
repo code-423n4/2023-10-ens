@@ -88,6 +88,8 @@ Describe any specific areas you would like addressed: Multi-delegation logic, pr
 # Tests
 
 ```bash
+# install npm packages (if you haven't already)
+yarn
 # run in first terminal
 npx hardhat node
 # run in another terminal
