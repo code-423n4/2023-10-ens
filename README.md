@@ -1,18 +1,27 @@
 # ENS audit details
-- Total Prize Pool: $24,500 USDC 
+- Total Prize Pool: $33,050 USDC 
   - HM awards: $16,500 USDC 
   - Analysis awards: $1,000 USDC 
   - QA awards: $500 USDC 
   - Bot Race awards: $1,500 USDC 
   - Gas awards: $500 USDC
-  - Judge awards: $2,400 USDC 
+  - Judge awards: $3,600 USDC 
   - Lookout awards: $1,600 USDC 
-  - Scout awards: $500 USDC 
+  - Scout awards: $500 USDC
+  - Mitigation Review: $7,350 USDC (Opportunity goes to top 3 certified wardens based on placement in this audit.) 
 - Join [C4 Discord](https://discord.gg/code4rena) to register
 - Submit findings [using the C4 form](https://code4rena.com/contests/2023-10-ens/submit)
 - [Read our guidelines for more details](https://docs.code4rena.com/roles/wardens)
 - Starts October 5, 2023 20:00 UTC 
 - Ends October 11, 2023 20:00 UTC
+
+## Automated Findings / Publicly Known Issues
+
+Automated findings output for the audit can be found [here](https://github.com/code-423n4/2023-10-ens/blob/main/bot-report.md) within 24 hours of audit opening.
+
+*Note for C4 wardens: Anything included in the automated findings output is considered a publicly known issue and is ineligible for awards.*
+
+[ ⭐️ SPONSORS: Are there any known issues or risks deemed acceptable that shouldn't lead to a valid finding? If so, list them here. ]
 
 # Overview
 
