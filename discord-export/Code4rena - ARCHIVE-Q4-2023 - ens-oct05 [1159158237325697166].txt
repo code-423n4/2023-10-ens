@@ -1,0 +1,2930 @@
+==============================================================
+Guild: Code4rena
+Channel: ARCHIVE-Q4-2023 / ens-oct05
+==============================================================
+
+[10/04/2023 18:15] knownfactc4_29311
+👋 Hello and welcome to the audit channel for the $33,050 USDC **ENS** audit!
+
+📆 Audit opens 10/05/2023 20:00 (20:00 UTC) and runs through 10/11/2023 20:00 (20:00 UTC) (7 days).
+
+Please give a warm welcome to the ENS team, particularly @nickjohnson, who will be available for questions either here in the channel or via DM in the GMT timezone.
+
+We'll be posting relevant links, documentation, etc. here, so if you intend to participate in this audit, consider enabling notifications for this channel. 🐺 ⏰
+
+Audit Page: https://code4rena.com/contests/2023-10-ens
+
+{Reactions}
+👋 (11) 
+
+[10/04/2023 20:31] catscanaudit
+Are there any previous audits?
+
+
+[10/04/2023 20:37] knownfactc4_29311
+Hi there,  ENS has done 4 previous audits in the past with Code4rena, 1 being a mitigation contest follow up.
+14 April 2023: https://code4rena.com/contests/2023-04-ens-contest#top
+16 December 2022: https://code4rena.com/contests/2022-12-ens-versus-mitigation-contest#top
+22 November 2022: https://code4rena.com/contests/2022-11-ens-versus-contest#top
+12 July 2022: https://code4rena.com/contests/2022-07-ens-contest#top
+
+{Reactions}
+👍 (7) 
+
+[10/05/2023 03:54] 0x3b
+I think he meant on the current code we are given.
+
+
+[10/05/2023 03:54] 0x3b
+Like is this 200 solc new or audited code.
+
+{Reactions}
+👆 (7) 
+
+[10/05/2023 08:59] noro9954
+how do you know its 200 solc ?
+
+
+[10/05/2023 09:01] kartoonjoy
+Please refer to the https://discord.com/channels/810916927919620096/958800160870240286/1159136183922741288
+
+
+[10/05/2023 09:33] xariextz
+Same question here! @KnownFact | C4
+
+
+[10/05/2023 09:37] kartoonjoy
+The sponsor would need to confirm whether the current scope has been audited previously.
+
+{Reactions}
+👍 (6) 
+
+[10/05/2023 23:25] 0xc86
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - ens-oct05 [1159158237325697166].txt_Files/Screenshot_2023-10-06_at_4.54.08_AM-6B971.png
+
+{Reactions}
+👍 (8) 
+
+[10/06/2023 11:50] stormreckson
+This is  very interesting.
+
+
+[10/06/2023 14:00] asui0944
+``amounts[:sourcesLength]`` what's this ``:`` ?
+Is it slicing the amount array to upto the sourcesLength
+
+
+[10/06/2023 14:00] asui0944
+I've never seen this used in solidity before
+
+
+[10/06/2023 14:06] pfapostol
+it is only work with calldata i think
+
+
+[10/06/2023 14:07] asui0944
+won't work with memory?
+
+
+[10/06/2023 14:08] pfapostol
+don't know, may try in remix
+
+{Reactions}
+👍 
+
+[10/06/2023 14:18] j4x_98
+Hey @nickjohnson , are we correct to assume that this will only be deployed on ethereum?
+
+
+[10/06/2023 14:21] asui0944
+why is the bot race results not out yet?
+
+
+[10/06/2023 14:23] itsmetechjay
+our goal is to post those within 24 hours of audit launch.
+
+{Reactions}
+👍 
+
+[10/06/2023 14:56] zdravkohr
+Yes, only calldata
+
+
+[10/06/2023 14:56] stormreckson
+I think it's limiting the amount output up to `sourcesLength` also this  `:`  could be range .
+
+
+[10/06/2023 14:56] zdravkohr
+It slices from index to index (exclusive)
+
+{Reactions}
+👍 
+
+[10/06/2023 15:23] tapir31
+Can someone make an example of how this contract will be used? It looks to vague in first sight..
+
+
+[10/06/2023 16:19] Message Wolf#0225 (pinned)
+**Automated Findings / Publicly Known Issues**
+
+Automated findings output for the audit can be found [here](https://gist.github.com/code423n4/33c1c8dad584e9eba48c38c69495fb59).
+
+*Note for C4 wardens: Anything included in the automated findings output is considered a publicly known issue and is ineligible for awards.*
+
+
+[10/06/2023 16:25] itsmetechjay
+Pinned a message.
+
+{Reactions}
+thankyou 
+
+[10/06/2023 18:24] trachev
+Is there a specific documentation for the ERC20MultiDelegate contract?
+
+
+[10/06/2023 18:25] trachev
+The test file will help you for that.
+
+{Reactions}
+👍 
+
+[10/06/2023 20:01] 0xtendency
+sent a FR & Dm @nickjohnson
+
+
+[10/06/2023 20:03] sandnallani
+I made a quick tweet about this audit if that helps anyone, 30s read
+ https://x.com/SandNallani/status/1710324096012284289?s=20
+
+{Reactions}
+👍 (12) ❤️ (3) 
+
+[10/06/2023 20:50] sil3th
+Thank you for sharing
+
+{Reactions}
+❤️ 
+
+[10/06/2023 22:45] 0xnevi
+Good stuff
+
+{Reactions}
+❤️ 
+
+[10/06/2023 23:24] jacobdcastro
+Solid 🙏
+
+{Reactions}
+❤️ 
+
+[10/07/2023 08:17] nmirchev8
+`error hardhat@2.10.1: The engine "node" is incompatible with this module. Expected version "^14.0.0 || ^16.0.0 || ^18.0.0". Got "20.5.1"`
+
+
+[10/07/2023 08:17] nmirchev8
+Anyone with the same error trying to install modules?
+
+
+[10/07/2023 08:27] 0xsl1
+Your node is version 20.5.1, while it expects version 14,16 or 18. Check the version with node -v, install the one required with nvm install, and then switch to it with nvm use
+
+{Reactions}
+✅ (2) 
+
+[10/07/2023 09:21] aslanbekaibimov
+@nickjohnson which version of solidity will be used? 0.8.7, I assume?
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - ens-oct05 [1159158237325697166].txt_Files/image-76849.png
+
+
+[10/07/2023 09:33] 0xflaming0
+What are the source and targets in this context?
+
+
+[10/07/2023 10:36] j4x_98
+@nickjohnson Asking again to clarify as this is not mentioned in the contest description
+
+
+[10/07/2023 11:59] 0x3b
+@nickjohnson do we have the code that these tokens are gonna be used on, like the contract for the DAO and voting schemes
+
+
+[10/07/2023 12:13] nisedo
+Not sure about something, let's say when user1 (deployer) wants to delegate to user2 (target) does it deploy 2 ERC20ProxyDelegator contracts? 1 for the source and 1 for the target, or only 1 for both the source and target?
+
+Is it:
+
+user1 (deployer) -> ERC20MultiDelegate.sol -> ERC20ProxyDelegator.sol (source) -> ERC20ProxyDelegator.sol (target) -> user2 (target)
+
+or
+
+user1 (deployer) -> ERC20MultiDelegate.sol -> ERC20ProxyDelegator.sol -> user2 (target)
+
+{Reactions}
+👍 (2) 
+
+[10/07/2023 12:33] j4x_98
+Should only be one for the target
+
+
+[10/07/2023 12:50] klounotmustitel
+Have any of you guys gotten a response from @nickjohnson?
+
+{Reactions}
+👎 (2) 
+
+[10/07/2023 13:31] 0xhelium
+I want to know, when a new proxy gets deployed os there a way to retrieve the specific address of that proxy instead of using the calculated one ?
+
+
+[10/07/2023 13:35] j4x_98
+I guess you could do the calculation yourself, or read the address from the transaction data when tokens get sent from/to the proxy. But there is no mapping of the proxies in the contract if you're looking for that
+
+{Reactions}
+👍 
+
+[10/07/2023 14:10] _3agle
+Maybe due to weekend. Let’s wait till Monday
+
+
+[10/07/2023 14:45] klounotmustitel
+Yeah, probably
+
+
+[10/07/2023 15:19] al_qa_qa
+This will not occuars as the contract address is calculated by only two variables: token address (non-changable), delegate address.
+
+If the contract was deployed then it will not deploy it, it will just return the address.
+```
+    function deployProxyDelegatorIfNeeded(
+        address delegate
+    ) internal returns (address) {
+        address proxyAddress = retrieveProxyContractAddress(token, delegate);
+
+        // check if the proxy contract has already been deployed
+       ...
+
+        // if the proxy contract has not been deployed, deploy it
+        ...
+
+        return proxyAddress;
+    }
+```
+
+{Reactions}
+🙏 
+
+[10/07/2023 15:26] 0xkral
+Anyone using foundry, how to setup this project in foundry🙂 ?
+
+I've done `forge init --force`👀
+
+
+[10/07/2023 15:32] sandnallani
+You can quickly check this, assign address proxyAddr = address (new ERC20ProxyDelegator…) . It was the same as the calculated one when I checked.
+
+
+[10/07/2023 15:35] 0xhelium
+Are the 3 dots at the end of ERC20ProxyDelegator needed ?
+
+
+[10/07/2023 15:37] zdravkohr
+no
+
+
+[10/07/2023 15:53] sandnallani
+The … means just that whole line of code.
+
+
+[10/07/2023 16:31] plamkata
+Has anybody found docs on the given contract?
+
+
+[10/07/2023 19:05] al_qa_qa
+The project uses hardhat framework, I think you can't use foundary. But installing steps are easy.
+
+First check that you have nodejs installed and npm.
+
+```
+node -v
+```
+```
+npm -v
+```
+
+If you don't have node installed, you can install it from there official website (nodejs.org I think).
+NOTE: install v18 not v20 as the project is notcomatible with v20.
+
+Then write in the terminal.
+```
+npm install
+```
+
+Then you can write
+```
+ npx hardhat test
+```
+
+
+[10/07/2023 19:55] 0xkral
+Thanks for the tip mate.
+
+But I'm not really familiar with writing tests in hardhat:gummy_wink: 
+
+I've previously used foundry with a project using hardhat . But I forgot how I did it :4739_Skeletor:
+
+
+[10/07/2023 20:10] al_qa_qa
+For this case you can integrate it in the hardhat itself. Harthat official website provides docs for integrating with foundary, You can check it out.
+
+https://hardhat.org/hardhat-runner/docs/advanced/hardhat-and-foundry
+
+{Embed}
+https://hardhat.org/hardhat-runner/docs/advanced/hardhat-and-foundry
+Integrating with Foundry | Ethereum development environment for pro...
+Ethereum development environment for professionals by Nomic Foundation
+Code4rena - ARCHIVE-Q4-2023 - ens-oct05 [1159158237325697166].txt_Files/card-1C40E.jpg
+
+{Reactions}
+👀 🫡 🔥 
+
+[10/07/2023 21:56] shahen.0000
+I always use foundry inside hardhat lol.
+
+{Reactions}
+🔥 😂 
+
+[10/07/2023 22:53] fulum
+https://tenor.com/view/thats-my-boy-proud-happy-hug-dad-gif-15728054
+
+{Embed}
+https://tenor.com/view/thats-my-boy-proud-happy-hug-dad-gif-15728054
+Code4rena - ARCHIVE-Q4-2023 - ens-oct05 [1159158237325697166].txt_Files/thats-my-boy-proud-668D2.png
+
+
+[10/07/2023 23:06] shahen.0000
+hella yeah...
+
+
+[10/08/2023 04:57] stealthyzzzz
+Btw if someone wants more context (or refresh their knowledge) about the voting, I recommend reading this Compound voting article since it describes the voting mechanism quite well. Please note that the smart contracts are slightly different with ENS https://anchorage.medium.com/a-look-at-smart-contract-voting-with-compound-5e75294aed9b
+
+{Embed}
+https://anchorage.medium.com/a-look-at-smart-contract-voting-with-compound-5e75294aed9b
+A Look at Smart Contract Voting with Compound
+Governance has become increasingly important in defining and executing how a protocol makes critical decisions in an equitable manner, with…
+Code4rena - ARCHIVE-Q4-2023 - ens-oct05 [1159158237325697166].txt_Files/1%2A6sIvAVO_-c3OeGLD0aAxpQ-6F1B5.png
+
+{Reactions}
+❤️ (2) 10_10 
+
+[10/08/2023 05:01] 0xnevi
+Hey friend just wanted to thank u for this again, it made me almost instantly understand the contract 👍
+
+{Reactions}
+❤️ 
+
+[10/08/2023 05:03] thetechnofeak
+hi does anyone have any idea how does the particular contract works?? where are its specific documentation ?
+
+
+[10/08/2023 05:30] stealthyzzzz
+@thetechnofeak I haven’t found documentation but you can check the test files (to understand the flow) + here is a quick tweet explaining it in plain text 😄 Also feel free to ask anything here
+
+{Reactions}
+🙌 😝 
+
+[10/08/2023 07:28] thetechnofeak
+i am new to foundry/hardhat and i currently dont know how to run tests and check the flow, can someone plese help me with it
+
+
+[10/08/2023 07:31] thetechnofeak
+or a documentation that can help me with it ??
+
+
+[10/08/2023 07:54] theschnilch
+At the bottom of the contest details on Code4rena you can find how to run the tests. If you want to know more about hardhat, here are the docs: https://hardhat.org/docs
+
+{Embed}
+https://hardhat.org/docs
+Documentation | Ethereum development environment for professionals ...
+Documentation about Hardhat, the Ethereum development environment
+Code4rena - ARCHIVE-Q4-2023 - ens-oct05 [1159158237325697166].txt_Files/card-1C40E.jpg
+
+{Reactions}
+🙌 
+
+[10/08/2023 08:46] 0xstalin
+heey @nickjohnson , I've sent you a DM, pls, check it out whenever you have some free time 🫡
+
+
+[10/08/2023 08:56] 0xnevi
+Good to see you again stalin, always competition when your'e around 🔥
+
+{Reactions}
+🔥 💯 
+
+[10/08/2023 08:58] 0xstalin
+happy to hear that sir, always trying to increase the bar 🫡
+
+{Reactions}
+🔥 (2) 
+
+[10/08/2023 09:08] _karanel
+Thanks for sharing. This is my first auditing contest. Looking forward to atleast understanding the contracts rather than finding bugs.
+
+{Reactions}
+🚀 (6) 🌕 
+
+[10/08/2023 09:21] mahdirostami
+@nickjohnson  I DMed you sir.
+
+
+[10/08/2023 09:53] marchev
+@nickjohnson From what I see in the provided tests, the `ERC20MultiDelegate` would be used with `ENSToken` for ENS governance-purposes.
+
+Could you please confirm whether this is the only ERC20 that would be supported? Or would others be supported as well?
+
+{Reactions}
+👆 (3) 
+
+[10/08/2023 10:44] ubl4nk
+sources are Delegators and targets are Delegates
+
+
+[10/08/2023 10:44] gumgumzum
+Both are delegates, no?
+
+{Reactions}
+👍 
+
+[10/08/2023 10:46] ubl4nk
+I don't know what you mean
+
+
+[10/08/2023 10:46] ubl4nk
+but
+
+
+[10/08/2023 10:46] ubl4nk
+source should be already delegated
+
+{Reactions}
+👍 
+
+[10/08/2023 10:47] gumgumzum
+Both source and targets are delegates, delgator is the msg sender
+
+{Reactions}
+👍 (2) 
+
+[10/08/2023 10:49] 0xnevi
+This is correct
+
+
+[10/08/2023 10:49] ubl4nk
+yes, msg.sender is the origin delegator, but when you pass `sources` parameter to contract, actually you are deposing delegation from source and delegate to `target`
+
+
+[10/08/2023 10:50] 0xnevi
+Yes i guess this terms are exchangeble, u can say its transferring from the source delegate to the target delegate, but only the delegator can initiate it
+
+{Reactions}
+👍 (2) 
+
+[10/08/2023 10:51] ubl4nk
+yes right, it is because of my poor english
+
+{Reactions}
+👍 (6) 
+
+[10/08/2023 10:57] ubl4nk
+As you see the `token` is defined ERC20Votes, so all ERC20Votes contract can be instead. but i don't think so, It is 99% ENSToken contract as you see in tests.
+
+
+[10/08/2023 10:57] plamkata
+Yeap you can do self to target, source to target, source to self
+
+
+[10/08/2023 10:57] plamkata
+anything else is either batch burned or batch minted
+
+
+[10/08/2023 11:10] stealthyzzzz
+Yeah I think because it is for voting it will only be the ENSToken since nothing else is used for that in ENS
+
+{Reactions}
+👍 
+
+[10/08/2023 11:49] tadev0
+Hi all, 
+just a question about the proxy contract, which code is : 
+```
+contract ERC20ProxyDelegator {
+    constructor(ERC20Votes _token, address _delegate) {
+        _token.approve(msg.sender, type(uint256).max);
+        _token.delegate(_delegate);
+    }
+}
+```
+This contract doesn't hold any runtime code, right? therefore, ```deployProxyDelegatorIfNeeded()``` function would always deploy again the contract, as it uses ```extcodesize``` to check if the proxy is already deployed?
+
+
+[10/08/2023 11:54] 0xtendency
+No, if an address has no code size then there is no contract deployed at that address
+
+
+[10/08/2023 11:54] 0xtendency
+You can try testing with Remix
+
+
+[10/08/2023 11:55] tadev0
+so what is the runtime code of this contract? 😅
+
+
+[10/08/2023 11:56] tadev0
+The init code of this contract doesn't seem to return any runtime code, am i wrong?
+
+
+[10/08/2023 12:05] trachev
+The contract's code size is still > 0, even if there is only a constructor
+
+{Reactions}
+👍 
+
+[10/08/2023 12:06] trachev
+Without the constructor, a deployed contract's extcodesize would also be > 0
+
+
+[10/08/2023 12:06] tadev0
+thanks for the answer.  just for information, what does a contract without anything contains in its runtime code?
+
+
+[10/08/2023 12:08] trachev
+Not sure, some low level stuff probably, you can check it in Remix, a completely empty contract's extcodesize would be 63.
+
+{Reactions}
+👌 
+
+[10/08/2023 12:08] ubl4nk
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - ens-oct05 [1159158237325697166].txt_Files/Capture-CC51C.PNG
+
+{Reactions}
+👌 (3) 
+
+[10/08/2023 12:08] ubl4nk
+It is returning some byte-codes
+
+
+[10/08/2023 12:35] 0x_6a70
+Here are some explanation on the creation code:
+https://www.rareskills.io/post/ethereum-contract-creation-code
+
+{Embed}
+https://www.rareskills.io/post/ethereum-contract-creation-code
+Ethereum smart contract creation code
+Ethereum smart contract creation code. This explains what happens at the bytecode level when an Ethereum smart contract is constructed
+Code4rena - ARCHIVE-Q4-2023 - ens-oct05 [1159158237325697166].txt_Files/935a00_a5dbde4a7ef64f009ebd6e41f7d3800c~mv-7A1B5.jpg
+
+{Reactions}
+👍 (2) 
+
+[10/08/2023 12:41] tadev0
+thanks a lot @0x_6a70
+
+{Reactions}
+👍 
+
+[10/08/2023 13:37] borongod
+Do all users share one ERC20MultiDelegate?
+
+
+[10/08/2023 13:39] tadev0
+Yes
+
+{Reactions}
+👍 
+
+[10/08/2023 14:33] 0xbtk
+Foundry tests, better late than never 😅 : https://twitter.com/0xbtk/status/1711026866344046830
+
+{Reactions}
+✅ (11) 🔥 (3) 
+
+[10/08/2023 14:48] nmirchev8
+Then why do we need EIP1155?
+
+
+[10/08/2023 15:07] tadev0
+EIP1155 is used to keep track of all delegates for a token holder. A token holder will call `delegateMulti`function  to delegate his token, this will trigger a proxy deployment (if needed) for each delegate the token holder has decided to delegate to. The token holder will send his token to the proxy (or from a proxy to another, but this is still tokens actually owned by the token holder), and `ERC20MultiDelegate ` inherits from ERC1155 to keep track of  delegated tokens actually owned by the token holder, in all different proxy delegate contracts. Here, ID of erc1155 `_balances` mapping is the delegate address (and not a token)
+
+{Reactions}
+❤️ (2) 👍 
+
+[10/08/2023 15:12] nmirchev8
+Ahhh. I see, thank you
+
+
+[10/08/2023 15:14] tadev0
+np.
+`_burnBatch` and `_mintBatch` are here used to update ERC1155 mappings and check if the caller of `delegateMulti` is  legitimate
+
+{Reactions}
+👍🏻 ❤️ 
+
+[10/08/2023 15:22] tadev0
+this contract is pretty well designed and straightforward!
+
+{Reactions}
+👍 (3) 
+
+[10/08/2023 15:24] ali_shehab.
+How do you guys rate this contest?
+
+
+[10/08/2023 15:26] asui0944
+I still don't know why users will use this contract💀 
+Im assuming it will be used by  users who have voting tokens to store their tokens in  the ``ERC20ProxyDelegator`` contract which doesn't have any function but can be managed from the ``ERC20MultiDelegate`` contract.
+Or i might be totally wrong?
+
+
+[10/08/2023 15:29] gumgumzum
+I'm guessing it's the multi delegation with different amounts aspect of it
+
+
+[10/08/2023 15:29] al_qa_qa
+You are right, even the reports that are deployed, are not real issues.
+
+Only one medium issue for a single point of failure in `setUri()`. which is restricted to onlyowner, it is written correctly.
+
+
+[10/08/2023 15:30] tx.origin
+this basically just enables multiple delegations. ERC20Votes only allows for one delegatee
+
+{Reactions}
+👍 (5) 
+
+[10/08/2023 15:32] tadev0
+The medium doen't say `setUri()`should be restricted to onlyOwner, but it is a general information that onlyOwner functions are a potentiel risk if the owner is malicious. But as setUri is not important regarding logic of the contract, this isn't a real issue, indeed
+
+{Reactions}
+👍 
+
+[10/08/2023 15:32] asui0944
+so this means if a user wants to enable multiple delegations then his tokens will need be held by the ``ERC20ProxyDelegator`` contract?
+
+
+[10/08/2023 15:32] tx.origin
+yeah the proxy delegator just works like a middleman
+
+{Reactions}
+👍 (2) 
+
+[10/08/2023 15:33] tadev0
+if you want to multi delegate, u'll need to send your tokens to multiple proxies, indeed.
+
+{Reactions}
+👍 (2) 
+
+[10/08/2023 15:33] al_qa_qa
+Yea, you are right. this is my opinion too.
+
+
+[10/08/2023 15:34] gumgumzum
+Yes, that would be the easiest way of doing it. The alternative being, distributing the ENS tokens across multiple wallets and delegating from them
+
+{Reactions}
+👍 (2) 
+
+[10/08/2023 15:35] tx.origin
+yeah this just allows someone to do it in a single transaction
+
+{Reactions}
+👍 (2) 
+
+[10/08/2023 15:45] asui0944
+Ok 
+say a user decides to use the ``ERC20MultiDelegate`` contract for the first time how would he use it like what are the arguments he will pass in the ``delegateMulti`` function ?
+
+
+[10/08/2023 15:48] tx.origin
+the function is pretty straightforward and you could also read the tests to get a feel for the function.
+Basically you would just call with an empty array for the sources and then the targets you want to delegate to and the amounts are self explanatory as well
+
+{Reactions}
+👍🏾 
+
+[10/08/2023 15:50] asui0944
+ahh i see 
+I was wondering why the require ``sourcesLength > 0 || targetsLength > 0,`` was using || instead of && 
+thanks 🫡
+
+
+[10/08/2023 15:51] tadev0
+because the're not necessarly of the same length , depends on if you only switch for another delegate, or if you start a new delegation, or reimburse..
+
+{Reactions}
+👍 (2) 
+
+[10/08/2023 16:09] Deleted User
+`No arguments passed to the base constructor. Specify the arguments or mark "ERC20MultiDelegate" as abstract`     why i got this error when i open the in-scope file in vscode ? i just download & open it without any modification
+
+
+[10/08/2023 16:10] tadev0
+you should clone the whole repo
+
+
+[10/08/2023 16:18] Deleted User
+yeah thats the problem, but if you know an extension or what can i do to diff the in-scope files with the out-of-scope  ?
+
+
+[10/08/2023 16:19] nmirchev8
+And I get this when I try to run the tests
+```
+  1) ENS Multi Delegate
+       "before each" hook for "should be able to delegate multiple delegates in behalf of user":
+     Error: missing argument:  in Contract constructor (count=2, expectedCount=4, code=MISSING_ARGUMENT, version=contracts/5.7.0)
+```
+
+
+[10/08/2023 16:19] nmirchev8
+Somebody else?
+
+
+[10/08/2023 16:20] Deleted User
+constructor needs 4 arguments and  there are only 2 provided i think, check the arguments missing and add them
+
+
+[10/08/2023 16:22] nmirchev8
+Yeah, but I cannot understand which one, as I also haven't modify anything
+
+
+[10/08/2023 16:32] trachev
+the constructor needs only 2 arguments, so the issue must be somewhere else:
+```
+ constructor(
+        ERC20Votes _token,
+        string memory _metadata_uri
+    ) ERC1155(_metadata_uri) {
+        token = _token;
+    }
+```
+
+{Reactions}
+🤔 
+
+[10/08/2023 16:33] trachev
+Maybe try cloning the repo again
+
+
+[10/08/2023 16:38] plamkata
+So we can permissionlessly transfer votes from any source proxy to any target?
+
+
+[10/08/2023 16:38] plamkata
+Even if not ours
+
+
+[10/08/2023 16:40] gumgumzum
+That shouldn't be possible
+
+
+[10/08/2023 16:40] tadev0
+no, it is not possible
+
+
+[10/08/2023 16:40] gumgumzum
+Shares burning / transfer will revert
+
+{Reactions}
+👍 (3) 
+
+[10/08/2023 16:52] asui0944
+just an opinion but isn't the purpose of delegate to delegate the voting rights and still hold the tokens but now we're transferring it to a proxy contract 🤷‍♂️
+
+
+[10/08/2023 16:56] sandnallani
+It’s done elegantly, by having that proxy contract delegate to the target.
+
+
+[10/08/2023 17:05] _karanel
+Umm, so basically the initial token holder can change the delegatee and a new proxy contract deployed and would be sent the ENSToken. Am I understanding this correctly?
+
+
+[10/08/2023 17:06] borongod
+The holder of the ERC1155 token can change the delegatee:gummy_wink:
+
+
+[10/08/2023 17:07] _karanel
+Oh okay. I thought it was ENSToken.
+
+
+[10/08/2023 17:12] _karanel
+The token being transferred to the proxy contracts is ENSToken or the ERC1155 token?
+
+
+[10/08/2023 17:13] _karanel
+I think it's ENSToken
+
+
+[10/08/2023 17:13] _karanel
+Just want to confirm
+
+
+[10/08/2023 17:15] asui0944
+I dont know if the votes token is the ENSToken if it is then yes
+
+
+[10/08/2023 17:16] asui0944
+the ERC1155 is not transferable
+
+
+[10/08/2023 17:16] _karanel
+ENSToken extends ERC20, ERC20Permit and ERC20Votes. So I believe it should be the one that's being transferred.
+
+{Reactions}
+👍 
+
+[10/08/2023 17:16] zdravkohr
+Yes
+
+{Reactions}
+👍 
+
+[10/08/2023 17:18] asui0944
+does anyone have a foundry setup?
+
+
+[10/08/2023 17:18] _karanel
+Someone just posted their foundry test link here
+
+
+[10/08/2023 17:18] _karanel
+This
+
+
+[10/08/2023 17:18] gumgumzum
+Why not ?
+
+
+[10/08/2023 17:19] asui0944
+i mean to say there is no external function to directly transfer
+
+
+[10/08/2023 17:19] _karanel
+It still could be transferred
+
+
+[10/08/2023 17:19] gumgumzum
+There is (safeTransferFrom, safeBatchTransferFrom)
+
+{Reactions}
+✅ 
+
+[10/08/2023 17:19] _karanel
+Using the ERC1155 contract's transfer method.
+
+
+[10/08/2023 17:20] theshogoki
+yep, it is transferrable, as it inherits it from the OZ contract
+
+
+[10/08/2023 17:20] asui0944
+what where?
+
+
+[10/08/2023 17:20] asui0944
+i only see the internal function
+
+
+[10/08/2023 17:21] _karanel
+An implementation is not necessarily required, because it already has the methods that it inherited
+
+
+[10/08/2023 17:22] theshogoki
+There is a public `safeTransferFrom`  and `batchSafeTransferFrom` function on ERC1155
+
+
+[10/08/2023 17:22] asui0944
+ohh i see
+
+
+[10/08/2023 17:22] asui0944
+💀
+
+
+[10/08/2023 17:23] asui0944
+all this time i thought there was no transfer function
+
+
+[10/08/2023 17:40] gumgumzum
+It happens 😂
+
+{Reactions}
+😂 (2) 
+
+[10/08/2023 17:41] _karanel
+So while deploying `ERC20ProxyDelegator`, `ERC20MultiDelegate` got the allowance to transfer tokens between `source` and `target`. But what I don't get is inside the `_delegateMulti` method, while iterating `_processDelegation` was called and the ENSToken was transferred from `source` to `target`. So why is `_mintBatch` and `_ burnBatch` there?
+
+
+[10/08/2023 17:41] _karanel
+Ah shit. They are for the ERC1155 mapping. My bad.
+
+{Reactions}
+✅ (2) 
+
+[10/08/2023 17:59] 0xbtk
+The sender will get the allowance and not the ERC20MultiDelegate.
+
+edit: ERC20MultiDelegate will get the allowance
+
+
+[10/08/2023 18:00] asui0944
+```function createProxyDelegatorAndTransfer(address target, uint256 amount) internal {
+        address proxyAddress = deployProxyDelegatorIfNeeded(target);
+        token.transferFrom(msg.sender, proxyAddress, amount);
+    }```
+how did the test pass here 
+the token is transferred only after the proxy contract is created but as in the proxy contract the constructor directly delegates how is this possible even when the proxy still doesn't hold any tokens??
+
+
+[10/08/2023 18:01] _karanel
+Umm, I don't think so. Because the `ERC20MultiDelegate` is deploying the proxy contract. So the `msg.sender` in the constructor would be address of `ERC20MultiDelegate`
+
+{Reactions}
+✅ (2) 
+
+[10/08/2023 18:02] zdravkohr
+Having tokens is not needed for a delegation
+
+
+[10/08/2023 18:03] _karanel
+Can someone confirm?
+
+
+[10/08/2023 18:03] zdravkohr
+I think that's true
+
+{Reactions}
+👍 
+
+[10/08/2023 18:04] asui0944
+that means it delegate nothing ?
+
+
+[10/08/2023 18:04] _karanel
+I ran the tests but 12 passed 4 failed.
+
+
+[10/08/2023 18:05] 0xbtk
+My bad, that's true: `MockERC20::approve(ERC20MultiDelegate: [0x2e234DAe75C793f67A35089C9d99245E1C58470b], 11579208923731619542357098500868790785326998466564056403945758400791312963`
+
+
+[10/08/2023 18:05] zdravkohr
+Yes, it sets the address of the delegatee
+
+{Reactions}
+👍 
+
+[10/08/2023 18:06] _karanel
+It says `AssertionError: Expected transaction to be reverted with ERC20: insufficient allowance, but other exception was thrown: Error: VM Exception while processing transaction: reverted with reason string 'ERC20: transfer amount exceeds allowance'` on all 4 of them
+
+
+[10/08/2023 18:07] zdravkohr
+You haven't changed anything?
+
+
+[10/08/2023 18:07] _karanel
+Yep
+
+
+[10/08/2023 18:09] gumgumzum
+Weird, all tests are passing for me. This should only happen if the delegator didn't give enough ENS tokens allowance to the ERC20MultiDelegate
+
+
+[10/08/2023 18:10] _karanel
+I just ran `npm run test test\delegatemulti.js`
+These cases are failing.
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - ens-oct05 [1159158237325697166].txt_Files/image-23A93.png
+
+
+[10/08/2023 18:11] _karanel
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - ens-oct05 [1159158237325697166].txt_Files/image-17F60.png
+
+
+[10/08/2023 18:12] gumgumzum
+Hmm, in this case it didn't revert when it was expected to, .i.e ERC20MultiDelegate had enough allowance to carry the op
+
+
+[10/08/2023 18:19] _karanel
+Not sure but both the errors are same and the transaction did get reverted. Must be some EVM issue.
+Expected Error message: `ERC20: insufficient allowance`
+Actual Error message: `ERC20: transfer amount exceeds allowance`
+
+
+[10/08/2023 18:24] gumgumzum
+Not sure why this is happening for you
+
+
+[10/08/2023 18:34] _karanel
+Can you check your `package-lock.json` or `yarn.lock` file and check exact version of openzepplin-contracts that got installed? Mine says 4.3.2. Probably this causing the issue because the ERC20 transferFrom function's error message was changed.
+
+
+[10/08/2023 18:43] 0xkral
+Super helpful🫡 .
+
+Anyone getting error while `forge build` ?
+```
+Error (9553): Invalid type for argument in function call. Invalid implicit conversion from contract ERC20Votes to contract ERC20Votes requested.
+  --> test/ERC20MultiDelegate.t.sol:35:48:
+   |
+35 |         multiDelegate = new ERC20MultiDelegate(ERC20Votes(votesToken), "http://localhost:8081");
+```
+How is conversion from contract ERC20Votes to contract ERC20Votes invalid:4739_Skeletor: ?
+
+
+[10/08/2023 18:45] gumgumzum
+package.json => ^4.3.1
+package-lock.json => 4.3.2
+yarn.lock => 4.7.2
+
+
+[10/08/2023 18:46] gumgumzum
+should be an address, no ?
+
+
+[10/08/2023 18:46] _karanel
+Yeah correct. I can see from v4.5 openzepplin changed the error message to `ERC20: insufficient allowance`
+
+
+[10/08/2023 18:48] 0xkral
+The constructor takes ERC20Votes right?
+
+
+[10/08/2023 18:50] fulum
+Change like this it should work
+
+
+[10/08/2023 18:50] fulum
+multiDelegate = new ERC20MultiDelegate(ERC20Votes(address(votesToken)), "http://localhost:8081");
+
+{Reactions}
+👍 
+
+[10/08/2023 18:50] fulum
+add the addres type for votesToken
+
+
+[10/08/2023 18:56] gumgumzum
+Yeah, votesToken is already ERC20Votes no ?
+
+
+[10/08/2023 18:57] nickjohnson
+By us, yes, but consider the goal of the audit to be against any wrapped erc20votes token, not just $ens
+
+{Reactions}
+👍🏻 (2) 
+
+[10/08/2023 18:58] j4x_98
+Thanks for clarifying 😊
+
+
+[10/08/2023 19:00] nickjohnson
+We'll deploy with the latest 0.8.x at the time of deployment
+
+
+[10/08/2023 19:01] nickjohnson
+The target is $ens, but it should be audited with the assumption it may be used with any non-malicious token contract that implements the interface
+
+
+[10/08/2023 19:06] 0xkral
+Yeah but it's showing this error. Pbly some weird typecasting issue
+
+
+[10/08/2023 19:08] gumgumzum
+Try passing it directly
+
+{Reactions}
+👍 
+
+[10/08/2023 19:28] 0xbtk
+It is working fine for me, because votesToken is an address
+
+{Reactions}
+👍 
+
+[10/08/2023 19:34] alexxander
+For anyone wondering about the constructor - the devs are using an older OZ version where Ownable sets msg sender as owner by default (the newest version needs a constructor parameter) ✌️
+
+{Reactions}
+👍🏾 (6) 
+
+[10/08/2023 19:34] 0xtendency
+sent a DM again @nickjohnson
+
+
+[10/08/2023 19:35] 0xtendency
+thanks, how could you find the version of OZ used?
+
+
+[10/08/2023 19:43] 0xstalin
+I think in the package.json
+
+
+[10/08/2023 19:44] 0xtendency
+Thank you, seen
+```
+  "author": "ENS Team (@ensdomains)",
+  "license": "MIT",
+  "dependencies": {
+    "@ensdomains/ens-contracts": "^0.0.7",
+    "@openzeppelin/contracts": "^4.3.1",
+    "keccak256": "^1.0.3"
+  },
+```
+
+
+[10/08/2023 19:44] 0xstalin
+or if all the dependencies were installed correctly, you can find the actual contract under the node_modules/
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - ens-oct05 [1159158237325697166].txt_Files/image-F7C27.png
+
+
+[10/08/2023 19:48] 0xtendency
+thank you ser
+
+
+[10/08/2023 19:48] stealthyzzzz
+Sent FR 🙂
+
+
+[10/08/2023 19:54] stealthyzzzz
+By interface do you mean any token that implements the ERC20Votes the same way as $ens?
+
+
+[10/08/2023 20:12] sandnallani
+There’s a hook function for after token transfer which has been overridden by the ERC20Votes. It which simply creates checkpoints of the votes.
+
+
+[10/08/2023 20:25] nickjohnson
+Yes
+
+
+[10/09/2023 01:18] fulum
+The voting power of ENS Governance will only be based on the audited contract ? And voting power wil be represented by the balance of each ERC20ProxyDelegator?
+
+
+[10/09/2023 02:04] coffiasd
+@nickjohnsonsend a FR
+
+
+[10/09/2023 02:13] dduncandumondd
+When I run the forge build on the foundry version, I get this error:
+
+```
+[⠢] Compiling...
+[⠃] Compiling 65 files with 0.8.20
+[⠊] Solc 0.8.20 finished in 596.39ms
+Error: 
+Compiler run failed:
+Error (9553): Invalid type for argument in function call. Invalid implicit conversion from contract ERC20Votes to contract ERC20Votes requested.
+  --> test/ERC20MultiDelegate.t.sol:33:48:
+   |
+33 |         multiDelegate = new ERC20MultiDelegate(ERC20Votes(votesToken), "http://localhost:8081");
+   |                                                ^^^^^^^^^^^^^^^^^^^^^^
+```
+
+
+[10/09/2023 03:46] _3agle
+I think the `votesToken` is already of type `ERC20Votes`.
+Try replacing the above statement with this: 
+```js
+multiDelegate = new ERC20MultiDelegate(votesToken, "http://localhost:8081");
+```
+
+
+[10/09/2023 05:40] 0xkral
+I think `votesToken` is type address.
+
+I havent been able to correct this
+
+
+[10/09/2023 05:41] 0xkral
+The contract deployed is `ENSToken` how to pass it to the constructor as `ERC20Votes`
+
+
+[10/09/2023 06:45] _karanel
+I found a vulnerability. Can someone tell me how to submit the finding? Is there some template for submission that I should follow?
+
+
+[10/09/2023 06:47] _3agle
+you can submit it from contest page: https://code4rena.com/contests/2023-10-ens
+
+
+[10/09/2023 06:55] _karanel
+Is there a submission template I could refer?
+Should I include how to mitigate the bug as well?
+
+
+[10/09/2023 06:57] 0x3b
+If you want I can write it for you😆
+
+{Reactions}
+😂 (19) 
+
+[10/09/2023 06:58] 0x3b
+Have you found the way to submit it?
+
+
+[10/09/2023 06:58] _karanel
+It's my first contest please do write one and share😂👉👈
+
+
+[10/09/2023 06:59] 0x3b
+no no, this was serious question, do you found the way to submit it,
+
+
+[10/09/2023 06:59] _karanel
+Yeah through the contest page right
+
+
+[10/09/2023 06:59] 0x3b
+ok
+
+
+[10/09/2023 06:59] _3agle
+@_karanel  https://docs.code4rena.com/roles/wardens/submission-policy
+
+{Embed}
+https://docs.code4rena.com/roles/wardens/submission-policy
+Submission policy
+
+
+[10/09/2023 07:00] _karanel
+Oh alright got it
+
+
+[10/09/2023 07:37] 0xtendency
+Curious if @nickjohnson has responded to anyone's private message here?
+
+{Reactions}
+👍 (2) 
+
+[10/09/2023 07:37] 0xwagmi
+```js
+targets:[
+  '0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266',
+  '0x70997970C51812dc3A010C7d01b50e0d17dc79C8',
+  '0x3C44CdDdB6a900fa2b585dd299e03d12FA4293BC',
+  '0x90F79bf6EB2c4f870365E785982E1f101E93b906'
+]
+[CALL] ERC20MultiDelegate(0xcf7ed3acca5a467e9e704c703e8d87f634fb0fc9).delegateMulti(sources: [], targets: [1390849295786071768276380950238675083608645509734, 642829559307850963015472508762062935916233390536, 344073830386746567427978432078835137280280269756, 827616541489050293873067319834814086332722428166], amounts: [19250000000000000000000000, 19250000000000000000000000, 19250000000000000000000000, 19250000000000000000000000])  
+this part in test case 
+      const delegates = [deployer, alice, bob, charlie];
+      const amounts = delegates.map(() =>
+        delegatorTokenAmount.div(delegates.length)
+      );
+
+      await multiDelegate.delegateMulti([], delegates, amounts);
+   
+```  how addresses turn into uint256  in hardhat  test 😶
+
+
+[10/09/2023 08:19] 0xleveler
+Any ideas why the ENS token refuses to compile on Remix ?
+
+
+[10/09/2023 08:20] 0xtendency
+When you use remix, remix fetches the latest OZ version
+
+
+[10/09/2023 08:20] 0xtendency
+You need to initialize the owner
+
+
+[10/09/2023 08:23] 0xleveler
+Yeah that is for ERC20MultiDelegate I think, I've gotten that to compile, the ENS token does not
+
+
+[10/09/2023 08:24] 0xtendency
+```
+import "./MerkleProof.sol";
+```
+
+
+[10/09/2023 08:26] 0xtendency
+create a MerkleProof.sol file in the same directory, then copy all of the code into that file
+
+
+[10/09/2023 08:27] 0xleveler
+I don't think that's the issue, I keep getting error of this type;
+ ```Derived contract must override function "_update". Two or more base classes define function with same name and parameter types.
+  --> contracts/ENSToken.sol:19:1:```
+
+
+[10/09/2023 08:27] 0xleveler
+Anyone facing the same problem ?
+
+
+[10/09/2023 08:34] gumgumzum
+Make sure you are using the same version for libs
+
+
+[10/09/2023 08:34] _3agle
+Instead of DMs, I have started using Private Threads. I guess it's more convenient for the sponsors
+
+{Reactions}
+👌 (4) 
+
+[10/09/2023 08:35] 0x11singh99
+@nickjohnson    https://docs.ens.domains/     For this audit which part of the docs is relevent
+
+{Embed}
+https://docs.ens.domains/
+Introduction
+Code4rena - ARCHIVE-Q4-2023 - ens-oct05 [1159158237325697166].txt_Files/-LZWNj0_mU4_3ENJbw83-6C33B.png
+
+
+[10/09/2023 08:37] 0xleveler
+Most likely a version issue, I'll debug it, thanks.
+
+
+[10/09/2023 08:38] 0xleveler
+Maybe the governance part, a little, but this codebase is kind of stand alone, minus the imports not much.
+
+
+[10/09/2023 08:42] 0x11singh99
+ie.  no specific docs for this codebase
+
+
+[10/09/2023 10:02] nickjohnson
+I don't see it, but I get a lot of spam. Just send me a private thread or DM request instead
+
+
+[10/09/2023 10:03] nickjohnson
+This contract isn't in the docs
+
+{Reactions}
+👍 
+
+[10/09/2023 10:19] 0xflaming0
+How does the proxy contract work?
+
+
+[10/09/2023 10:20] 0xflaming0
+My understanding is that a proxy address is created and then tokens are sent through to it in order to reimburse or delegate?
+
+
+[10/09/2023 10:39] 0xflaming0
+And also what tokens are expected to interact with the contract
+
+
+[10/09/2023 10:46] theshogoki
+Yep, the Proxy contract will hold the Tokens that are delegated to a specific address.
+
+
+[10/09/2023 10:48] theshogoki
+see here: https://discord.com/channels/810916927919620096/1159158237325697166/1160653235703521451
+
+{Reactions}
+❤️ 
+
+[10/09/2023 11:22] nickjohnson
+I believe I'm up to date on DMs; if anyone has questions that haven't been answered please send them to me here in a private thread.
+
+
+[10/09/2023 11:49] 0xbtk
+@nickjohnson Left you a question in a pt.
+
+
+[10/09/2023 11:57] deth2814
+@nickjohnson sent a DM.
+
+
+[10/09/2023 11:58] fulum
+@nickjohnson sent you a dm 🙌
+
+
+[10/09/2023 12:37] nickjohnson
+Since everyone is asking: The primary target for the token is to wrap $ENS. But the audit should consider any ERC20-compliant token that implements ERC20Votes as in-scope. 
+
+I don't consider rebase tokens, fee on transfer tokens etc, to be ERC20-compliant, as they violate key invariants of ERC20.
+
+{Reactions}
+❤️ (12) 💯 (7) 🔥 (2) 
+
+[10/09/2023 13:05] klau5_
+@nickjohnson sent a DM!
+
+
+[10/09/2023 13:50] 0xnevi
+@KnownFact | C4 This should be pinned inb4 50-100 submissions on this 😅
+
+{Reactions}
+🤪 (5) 😂 (6) 
+
+[10/09/2023 14:01] berlin.101
+@nickjohnson sent DM 👋
+
+
+[10/09/2023 14:02] al_qa_qa
+What do you mean?
+
+
+[10/09/2023 14:40] theshogoki
+regarding rebase and fee-on-transfer i guess
+
+{Reactions}
+👍 
+
+[10/09/2023 15:14] Deleted User
+For the delegateMulti() function, the arguments for `sources` & `targets` are just addresses converted in uint256 ?
+
+
+[10/09/2023 15:17] al_qa_qa
+exactly, they are addresses converted to uint256, then recasted again to addresses 🙂
+
+
+[10/09/2023 15:21] Deleted User
+and in that function was not possible to use address[] as arg and in function just convert to uint256, seeing uint256[] in argument DOES NOT suggest i shoud convert address in uint256 , thanks to the test to figure out  , thanks for this info too !!
+
+
+[10/09/2023 18:00] 0xhelium
+What is sources exactly ?
+
+
+[10/09/2023 18:01] 0xhelium
+Let's Say i delegate to a delegatee with empty [] sources . Token will be transfered from my account ```msg.sender```
+
+
+[10/09/2023 18:01] 0xhelium
+So what if i use some sources ?
+
+
+[10/09/2023 18:04] berlin.101
+When you did already delegate from yourself to delegates and then want to re-delegate, you would set the delegates (all or some) of the original delegates as sources for re-delegating. Makes sense?
+
+{Reactions}
+👍 (3) 
+
+[10/09/2023 18:38] Deleted User
+so if ( Alice , Bob )  have already the voting tokens and if I want to transfer the tokens from ( Alice , Bob ) to ( Carl , John ), it would be `sources  == ( Alice , Bob ) `   &   `targets  ==  ( Carl , John ) `  ?
+
+{Reactions}
+👍 (4) 
+
+[10/09/2023 19:19] 0xbtk
+- The deployer has 1e18 ENSToken.
+
+- They call the delegateMulti function with the following parameters:
+1. sourcesLength == 0: No source delegates.
+2. targetsLength == 1: One target delegate.
+3. amountsLength == 1: One amount of 1e18 ENSToken.
+
+- This creates a new targetProxy contract and transfers 1e18 ENSToken from the deployer to the targetProxy contract.
+- The deployer is minted 1e18 of multiDelegateToken for that specific target ID, and their votes will be delegated to the target.
+
+{Reactions}
+✅ (5) 
+
+[10/09/2023 20:09] slavcheww
+@nickjohnson Dmed you
+
+
+[10/09/2023 20:38] 0xsimeon
+What contract is the deployer in this context deploying?
+
+
+[10/09/2023 20:41] nmirchev8
+In this context deployer is not appropriate term. It could be any user.
+I guess he has written "deployer", because this flow is used in the tests
+
+
+[10/09/2023 21:07] 0xbtk
+Indeed, Delegator would've been more appropriate
+
+
+[10/09/2023 23:42] sandnallani
+❓ Are there any assumptions on who the holders of the ENS tokens using this multidelegate contract? All EOAs or contracts/multisigs?
+
+
+[10/10/2023 05:12] david8774
+Hey! Can someone give more context the modification referred here in https://github.com/code-423n4/2023-10-ens/blob/ed25379c06e42c8218eb1e80e141412496950685/contracts/MerkleProof.sol#L2? Sorry if this was asked/answered previously, late to the party 😇
+
+{Embed}
+https://github.com/code-423n4/2023-10-ens/blob/ed25379c06e42c8218eb1e80e141412496950685/contracts/MerkleProof.sol
+2023-10-ens/contracts/MerkleProof.sol at ed25379c06e42c8218eb1e80e1...
+Contribute to code-423n4/2023-10-ens development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q4-2023 - ens-oct05 [1159158237325697166].txt_Files/4a6a4b16-ee0d-4303-a756-54c815127199-2259E
+
+
+[10/10/2023 05:32] nickjohnson
+@sliponit that contract isn't relevant to the audit
+
+
+[10/10/2023 05:32] nickjohnson
+It's used by enstoken for the claim mechanism, which is out of scope
+
+
+[10/10/2023 05:40] david8774
+Tx for your prompt response, I was wondering why it was in the audit contract repo. I will dig in the code, best 🙂
+
+
+[10/10/2023 07:30] 0xnirlin
+How to generate the gas cost for indivisual function in hardhat, aka gas report.
+
+I am able to generate it for whole contract using the hardhat-gas-reporter plugin but want for indivisual functions.
+
+
+[10/10/2023 07:36] 0xnirlin
+@nickjohnson dmed you about another question.
+
+
+[10/10/2023 08:14] 0xflaming0
+@nickjohnson dmed!
+
+
+[10/10/2023 08:17] j4x_98
+Dmed you @nickjohnson
+
+
+[10/10/2023 09:00] tx.origin
+cant wait to see the report once this is over. Feel like I understand this codebase very very well but find it hard to find anything
+
+{Reactions}
+👍 (21) 
+
+[10/10/2023 10:57] al_qa_qa
+This is my first context, and I was frustrated because I couldn't find anything either. I felt better when I saw your message.
+
+
+[10/10/2023 11:10] slavcheww
+@nickjohnson dmed u
+
+
+[10/10/2023 11:23] superman_i4g
+You shouldn't be; you might need to get used to it for a while. Your resilience and consistency will be a huge game-changer for you! Never stop!👏🏽
+
+{Reactions}
+👍 (5) 
+
+[10/10/2023 11:29] japy69
+Moreover, this contest is perfect for begginers. The codebase is short and well-coded (so easier to understand). So it is not bad to don't find vulnerabilities.
+One tip: when you find a small weird line of code, try to dig into it (even for hours) instead of trying to find a "bigger" bug. Small things can become huge and you may be the only one to find it.
+
+{Reactions}
+💯 (8) 
+
+[10/10/2023 11:50] mahdirostami
+Does it mean that you find a big bug?😁
+
+{Reactions}
+😉 
+
+[10/10/2023 12:02] thesaleem_
+It’s my first one too. I’m not even frustrated, I’m happy because I understood the codebase perfectly well and it’s just part of the learning curve. 💪🏾
+
+{Reactions}
+👍 
+
+[10/10/2023 12:14] _karanel
+Same here.
+
+
+[10/10/2023 12:27] kawaicho
+What is the difference between target and source https://github.com/code-423n4/2023-10-ens/blob/ed25379c06e42c8218eb1e80e141412496950685/contracts/ERC20MultiDelegate.sol#L66-L67
+
+{Embed}
+https://github.com/code-423n4/2023-10-ens/blob/ed25379c06e42c8218eb1e80e141412496950685/contracts/ERC20MultiDelegate.sol
+2023-10-ens/contracts/ERC20MultiDelegate.sol at ed25379c06e42c8218e...
+Contribute to code-423n4/2023-10-ens development by creating an account on GitHub.
+Code4rena - ARCHIVE-Q4-2023 - ens-oct05 [1159158237325697166].txt_Files/4a6a4b16-ee0d-4303-a756-54c815127199-2259E
+
+
+[10/10/2023 12:34] asui0944
+target is the address you want to delegate your votes to and you will need to pass 0 as source at the first time
+say at first you pass 0 as the source and addr1 as the target now if you want to delegate your votes to addr2 here you will pass addr1 as the source and addr2 as the target
+
+{Reactions}
+👍🏻 (5) 
+
+[10/10/2023 12:35] aslanbekaibimov
+you dont pass zero, you pass nothing
+
+{Reactions}
+👍 (3) 
+
+[10/10/2023 12:36] asui0944
+yes 👍
+
+
+[10/10/2023 12:45] superman_i4g
+QQ; After the first delegation what happens let's say (Alice) wants to delegate from addr1 to addr2; he calls delegatemulti again?
+
+{Reactions}
+👍 
+
+[10/10/2023 12:46] asui0944
+exactly. Passing assr1 as the source and addr2 as the target
+
+
+[10/10/2023 12:47] superman_i4g
+And how do we know it's really Alice? What if it's an imposter?
+
+
+[10/10/2023 12:50] asui0944
+if you look at the ``_delegateMulti`` function after the for loop there is ``_burnBatch(msg.sender, sources, amounts[:sourcesLength]);`` . Notice it uses msg.sender
+
+
+[10/10/2023 12:50] superman_i4g
+Yes saw that; And?
+
+
+[10/10/2023 12:52] asui0944
+i  dont know how to explain this properly but that will make sure that the msg.sender(Alice) had previously delegate to addr1
+
+
+[10/10/2023 12:54] superman_i4g
+Right
+
+{Reactions}
+👍 
+
+[10/10/2023 13:00] superman_i4g
+One thing I must say is kinda poor about this contest is the lack of documentation on the contract. On top of that; so very few comments in the codebase. It might seem easy to understand but trust me somethings are better explained by the devs.
+
+
+[10/10/2023 13:10] thekmj
+I think this one is ok, the code itself is pretty clean and concise
+
+
+[10/10/2023 13:11] thekmj
+The only guesswork here is what an ERC1155 token represents, but it makes a lot of sense once you solved it
+
+
+[10/10/2023 13:13] asui0944
+the most confusing for me was the because the source and target address is also used as the token id for the 1155 token it was hard to get it at first
+
+
+[10/10/2023 13:20] 0xdemonnn
+@nickjohnson send a dm :gummy_wink:
+
+
+[10/10/2023 13:26] zdravkohr
+You can read this discussion too
+
+{Reactions}
+👍 (2) 
+
+[10/10/2023 13:26] zdravkohr
+https://twitter.com/0xSimeon/status/1711423484725780619?t=xNsyvboXGd07D_TqivctEA&s=19
+
+
+[10/10/2023 13:44] japy69
+@nickjohnson Can this contract be deployed as the implementation of a proxy ? Who will deploy the contract ?
+
+
+[10/10/2023 14:41] pascal9476
+Kunle? 
+I sent a dm
+
+
+[10/10/2023 15:16] slavcheww
+@nickjohnson dmed u
+
+
+[10/10/2023 17:08] asui0944
+what version of openzeppelin is used ?
+
+
+[10/10/2023 17:26] zdravkohr
+Check package.json
+
+{Reactions}
+👍 
+
+[10/10/2023 17:26] zdravkohr
+4.3.1 or something like tht
+
+
+[10/10/2023 17:33] theshogoki
+That is actually a good question. 
+
+@nickjohnson Which version should we assume to be used?
+In package-lock.json i think it is 4.3.2
+But the Readme states to use `yarn` and in `yarn.lock` it is `4.7.2`
+
+So i assume the latter one is used? Is this assumption correct?
+
+
+[10/10/2023 17:45] xariextz
+When you open the OZ files you can see the version
+
+
+[10/10/2023 17:45] _karanel
+Using npm would install v4.3.2, and would fail 4 tests given in `test/delegatemulti.js` file
+
+{Reactions}
+👍🏻 
+
+[10/10/2023 17:45] xariextz
+For example for ERC1155: // OpenZeppelin Contracts (last updated v4.7.0) (token/ERC1155/ERC1155.sol)
+
+
+[10/10/2023 17:45] _karanel
+Better to use yarn
+
+
+[10/10/2023 18:28] c3phas.
+@nickjohnson sent a friend request
+
+
+[10/10/2023 18:31] ivanfitro
+how is possible if the source is address 0 send tokens from the source to delegates? The balance of the address 0 is 0 no?
+
+
+[10/10/2023 18:36] oxwhite
+I went over history of messages but couldn't see something related. Can anyone clarify why the type of sources and targets in delegateMulti or _delegateMulti function is uint256[]? Aren't those are addresses. well basically they are updated inside the for loop by doing some typecasting. but when delegateMulti function is called by someone for the first time, what is gonna be passed in as an argument?
+
+
+[10/10/2023 18:37] ivanfitro
+I have the same question. I see that the function gets the balance of the source, but the first time is address 0, and we have an assert that amount <= balance, if the first time is address 0 the balance would be 0 no?
+
+
+[10/10/2023 18:39] ivanfitro
+Mmm...I see, the balance is obtained from msg.sender not from the source, the source only is the id
+
+
+[10/10/2023 18:41] zdravkohr
+Its just the uint256 value of the addresses
+
+{Reactions}
+👍 (2) 
+
+[10/10/2023 18:43] 0xkral
+I believe when the sources is empty [] then it won't enter the if condition which does this check. It enters second else if condition when sources is empty
+
+{Reactions}
+👍 
+
+[10/10/2023 18:44] ivanfitro
+No because the delegates is not empty, and the if takes the minimum of two
+
+
+[10/10/2023 18:45] 0xkral
+sourcesLength = 0 targetsLength = 2 
+
+math.min(sourcesLength, targetsLength) = 0
+
+
+[10/10/2023 18:48] ivanfitro
+yes sorry you are right
+
+
+[10/10/2023 18:50] stealthyzzzz
+It will be the addressess of delegatees from who they want to transfer the delegated tokens (source) or/and who they want to delegate tokens to (targets). These are uint256 since the ERC1155 tokens that are accessed via "_burnBatch()" and "_mintBatch()" are mapped to the delegator with these uint256 values of the delegatee addresses. This way the delegator can prove that they have delegated to the given address since the mapping (_balances[]) holds that value (_balances[delegatee][delegator] = delegatedTokenAmount).
+
+
+[10/10/2023 18:51] ivanfitro
+ok the first time will enters in the third if if you want to create a proxy, that late you can use like a source
+
+
+[10/10/2023 18:57] nickjohnson
+It could be, but we won't because it doesn't need to be upgradeable. Anyone can deploy it for any token they want to wrap.
+
+
+[10/10/2023 18:57] 0xkral
+Yes the first time if the source is empty, it creates a proxy.
+
+Then later you can pass in that as the source and then the check you mentioned earlier will come into play
+
+
+[10/10/2023 18:57] ivanfitro
+ok i understand, thank you very much!
+
+{Reactions}
+hi5 
+
+[10/10/2023 18:59] oxwhite
+Thank you very much. I appreciate for the explanation👍
+
+{Reactions}
+hi5 
+
+[10/10/2023 19:48] ivanfitro
+why getBalanceForDelegate takes the balenceOf from ERC1155 and not from the ERC20Votes? Because the tokens are send from ERC20Votes and the balance in ERC1155 is never actualized no?
+
+
+[10/10/2023 19:51] zdravkohr
+What do you mean with your second sentence?
+
+
+[10/10/2023 19:53] stealthyzzzz
+The balance here means the amount of tokens a delegator has delegated to a certain address. It is tracked with ERC1155 tokens which is why the balance is taken from there
+
+
+[10/10/2023 19:55] ivanfitro
+mmm...ok but i dont see anywhere where this balance is actualized
+
+
+[10/10/2023 19:55] ivanfitro
+because only uses transferFrom from ERC20Votes
+
+
+[10/10/2023 19:56] stealthyzzzz
+What do you mean by actualized? The tokens are minted via _mintBatch and burned via _burnBatch in delegateMulti() function that update the ERC1155 balances
+
+{Reactions}
+🫡 
+
+[10/10/2023 19:56] ivanfitro
+aaah ok, thank you I dont see this
+
+{Reactions}
+🔥 
+
+[10/10/2023 20:36] 0xflaming0
+@nickjohnson dm 🙂
+
+
+[10/10/2023 20:46] japy69
+I think there is an issue if it is. Do I submit it or do I consider it out of context? @nickjohnson
+
+
+[10/10/2023 20:56] nickjohnson
+I would consider it out of scope
+
+{Reactions}
+👍 (2) 
+
+[10/10/2023 22:07] 836541#7294
+@nickjohnson Hi! `_reimbuse` function is designed to withdraw voting tokens from a Proxy Delegator ?
+
+
+[10/10/2023 22:09] nickjohnson
+Yes
+
+
+[10/10/2023 22:09] 836541#7294
+Thank you!
+
+
+[10/10/2023 23:09] 0xnevi
+Hi @nickjohnson could you check private threads thanks!
+
+
+[10/11/2023 01:24] irving6969
+how to make private threads sir
+
+
+[10/11/2023 01:57] 0xnevi
+1. Click on Top right threads icon
+2. Click the + button
+3. Enable private threads option, once done mention anybody in the thread to invite
+
+{Reactions}
+10_10 
+
+[10/11/2023 02:07] irving6969
+thank you sir:10_10:
+
+
+[10/11/2023 02:56] cookedcookee
+😘
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - ens-oct05 [1159158237325697166].txt_Files/dm-D567D.png
+
+{Reactions}
+🤣 (23) 
+
+[10/11/2023 04:42] 0xdemonnn
+hello guys, I want to make sure, is it true that a multidelegate in process only uses one proxy to distribute its vote tokens?
+
+
+[10/11/2023 05:32] zdravkohr
+It uses as many proxies as unique delegatees they are
+
+
+[10/11/2023 05:36] 0xdemonnn
+so, delegatees have 1 proxy each and multidelegate have many proxy? okay, thank you 👍🏻
+
+
+[10/11/2023 05:44] j4x_98
+The multidelegate itself does not have a proxy. You can see it as the gate for transferring tokens from/to the proxies of the delegates
+
+{Reactions}
+👍 
+
+[10/11/2023 06:01] _karanel
+sources is the list of already delegated addresses and targets is the list of addresses (maybe new or old) that the delegator wants to delegate to.
+
+{Reactions}
+👍 
+
+[10/11/2023 06:06] 0xnirlin
+ENS Good
+
+{Reactions}
+🔥 (5) 
+
+[10/11/2023 06:07] shubh0412
+Wardens Sad
+
+{Reactions}
+😆 (10) 
+
+[10/11/2023 06:11] 0xnirlin
+We have three routes:
+
+1. Sources and Targets have the same length, in that case we transfer the tokens from one proxy to other, each proxy delgating the tokens to a specific target address. So we burn the nfts of source id and mint the nfts with target id's to the msg.sender.
+2. Sources array is passed as empty and we have something in the target, in that case tokens are transferred from the msg.sender to the target proxy address derived, if deployed already than it is used, otherwise for a new target, new proxy is deployed that delegates the tokens. And we mint the nfts to user to the amount sent to target with the id of target address
+3. Target array is empty but sources array is not, in this case source is address of the target (yeah confusing first time) to which previously msg.sender delegated. In this case tokens from that proxy are transferred back to msg.sender and we burn the same amount of nft from the user with the id source address.
+
+{Reactions}
+👍 (4) 
+
+[10/11/2023 06:11] 0xnirlin
+Wardens always sad and wenning haha
+
+{Reactions}
+🤣 (2) 
+
+[10/11/2023 06:18] zuhaibmohd
+I would like to add two more scenarios @nirlin 
+
+4. Source array length < target array length — For indexes where in both source and target exist, `_processDelegation` is called, for rest of the target length indexes `createProxyDelegatorAndTransfer` is called.
+
+5. Source array length > target array length — For indexes where in both source and target exist, `_processDelegation` is called, for rest of the source length indexes `_reimburse` is called.
+
+
+[10/11/2023 06:21] 0xnirlin
+Yeah, was tired of typing 😂  
+Could have used length notation instead of empty arrays
+
+{Reactions}
+👍 (3) 
+
+[10/11/2023 06:24] superman_i4g
+QQ; how many submissions so far?
+
+
+[10/11/2023 06:28] shubh0412
+That **trick** has been removed I guess where you saw the submission no. just after submitting 🤔
+
+
+[10/11/2023 06:29] superman_i4g
+Dayumn😬
+Just wondering what others will be submitting
+
+
+[10/11/2023 06:31] shubh0412
+It told u the number not the submission details 🤣
+
+
+[10/11/2023 06:32] superman_i4g
+Yea, I know
+Knowing the numbers keeps me going🌚
+
+{Reactions}
+🫠 
+
+[10/11/2023 06:45] daniel526
+anyone to dm here?
+
+
+[10/11/2023 06:53] j4x_98
+Although the numbers don't really mean anything. There can be a contest with 100s of submissions but none of them valid as well as one with only few but all valid. Especially I'd guess the count here will be a lot lower compared to other contests as the codebase is super small 😕
+
+
+[10/11/2023 06:55] superman_i4g
+Exactly why I wanted to know the submission count🌚
+
+
+[10/11/2023 06:57] j4x_98
+Understandable, but I would not use it as a measure on what keeps you going. Even if there is no med/high bug found at all it makes sense to keep looking for low/nc bugs which will then receive the price pot or write analysis/gas report as those will bring you money too 🙂
+
+
+[10/11/2023 06:57] j4x_98
+I also seem to stumble across higher severity bugs sometimes when I write the analysis or do QA/Gas as those also require a pretty good understanding of the codebase
+
+{Reactions}
+💯 (6) 
+
+[10/11/2023 07:21] 0xhelium
+Where are ```_mintbatch and _burnbatch``` implemented ?
+
+
+[10/11/2023 07:23] j4x_98
+ERC1155
+
+{Reactions}
+👍 (2) 
+
+[10/11/2023 09:21] ali_shehab.
+Hi @nickjohnson i send you fr
+
+
+[10/11/2023 09:25] al_qa_qa
+I saw some reports published in `bot-report.md`, and this report was not modified again. I am new in code4rena, I want to know where are the wardens' reports? How to check if my report got accepted or not?
+
+
+[10/11/2023 09:27] zdravkohr
+Wardens' reports are private. They will be published after the contest ends and results come out
+
+{Reactions}
+👍 
+
+[10/11/2023 09:27] theshogoki
+bot-report.md is the result from the bot race, and will be known issues
+
+{Reactions}
+👍 
+
+[10/11/2023 09:27] ali_shehab.
+If someone find a high or medium report in the bot race are they also considered in the HM pool?
+
+
+[10/11/2023 09:30] al_qa_qa
+Thanks for the illustration.
+
+One additional question, What is `bot race` and how to participate in it?
+
+
+[10/11/2023 09:31] zdravkohr
+You can check the c4 docs
+
+
+[10/11/2023 09:31] zdravkohr
+Before a contest starts, bots run through the codebase and report some issues
+
+{Reactions}
+👍 (2) 
+
+[10/11/2023 09:32] zdravkohr
+I think not, since they are out of scope
+
+
+[10/11/2023 09:32] zdravkohr
+But im not sure
+
+
+[10/11/2023 09:36] Deleted User
+Bot race is other category with other sum of money
+
+
+[10/11/2023 09:47] sandnallani
+`Note for C4 wardens: Anything included in the automated findings output is considered a publicly known issue and is ineligible for awards.`
+So it's pointless to submit an issue that's already been reported in the bot races.
+
+
+[10/11/2023 09:50] nickjohnson
+I do need to sleep, guys. 😅
+
+{Reactions}
+😂 (29) empathy (2) doge_kek (2) 
+
+[10/11/2023 13:05] jnforja
+Hey @nickjohnson, just to clarify, by "Implements ERC20Votes" do you mean the token inherits from ERC20Votes from openzeppelin? Or other contracts that provide the same functionality such as ERC20Vote from thirdweb are also in scope?
+
+
+[10/11/2023 13:22] _karanel
+I guess as long as all methods and their signatures match, they are essentially the same contract whether it's from OZ or thirdweb.
+
+{Reactions}
+👍🏻 
+
+[10/11/2023 15:36] nickjohnson
+That's right. As long as it doesn't violate other invariants like rebase tokens do for example
+
+{Reactions}
+🙏 
+
+[10/11/2023 16:02] mike_bello90
+Hi nick send you a Private threat with a question, can you help me please 😀
+
+
+[10/11/2023 16:03] nickjohnson
+No threats, private or public, please!
+
+{Reactions}
+😂 (38) 
+
+[10/11/2023 16:04] mike_bello90
+ok, send you a FR
+
+{Reactions}
+😄 (2) 😅 💀 (4) 
+
+[10/11/2023 16:06] kawaicho
+@nickjohnson sent you are fr
+
+
+[10/11/2023 16:13] 0xsimeon
+Feels good to see link to my reply here 😊🙏
+
+{Reactions}
+🤙 
+
+[10/11/2023 16:21] superman_i4g
+You did well buddy🫡
+
+
+[10/11/2023 19:16] stealthyzzzz
+Everyone aggressively typing reports rn?
+
+
+[10/11/2023 19:18] asui0944
+I got nothing to report sir💀
+
+{Reactions}
+chefskiss (4) 
+
+[10/11/2023 19:19] al_qa_qa
+I will wait the next audit, I think its wasting time at least for me to check the codebase again.
+
+{Reactions}
+😆 (2) 
+
+[10/11/2023 19:19] asui0944
+Cant wait to see what I've missed
+
+{Reactions}
+🔥 (3) 
+
+[10/11/2023 19:20] asui0944
+same here
+
+
+[10/11/2023 19:20] stealthyzzzz
+This is great attitude!
+
+{Reactions}
+🫡 (2) 
+
+[10/11/2023 19:21] al_qa_qa
+Luckly the next audit is in two days 💪
+
+
+[10/11/2023 19:22] asui0944
+well atleast I reported a grade C analysis😅
+
+{Reactions}
+10_10 (4) 👍 (3) 
+
+[10/11/2023 19:37] 0xnirlin
+You are me, me is you
+
+{Reactions}
+🫂 (4) 
+
+[10/11/2023 20:02] C4
+**🚨 AUDIT ALERT**
+
+@🐺wardens The **ENS** audit is now closed! Huge thanks to everyone who participated 🔍, whether you submitted a finding or not.
+
+What's next: The sponsor team and judge will review the findings over the next couple of weeks. Keep an eye on #📢announcements for regular updates on how the audit is progressing through awarding 🤑🏆, judging 🧑‍⚖️ and reporting 📜. Feel free to ping a Contest-Admin if you have questions along the way!
+
+{Reactions}
+🔥 (3) 
+
+[10/11/2023 20:04] pascal9476
+How many submissions
+
+
+[10/11/2023 20:06] 0xnirlin
+Results for this one will come blazingly fast.
+
+{Reactions}
+🥳 (2) 
+
+[10/11/2023 20:06] mahdirostami
+why
+
+
+[10/11/2023 20:07] 0xnirlin
+That's a secret haha
+
+{Reactions}
+😂 (10) 
+
+[10/11/2023 20:07] 0xnirlin
+:dance_vibe:
+
+
+[10/11/2023 20:07] 0xkral
+Huge thanks to @nickjohnson for promptly responding to our questions while flooded with dms 😅.
+And props to @btk for sharing the foundry setup🫡.
+
+Haven't found anything but I did go crazy while exploring vulns and tests to invalidate myself :4739_Skeletor: 
+
+Looking forward to read H/Ms if there are any🫡
+
+{Reactions}
+thankyou C4Keycap (2) 👍 
+
+[10/11/2023 20:13] asui0944
+Voting power can be directly viewed from the ENSToken ``getVotes`` function
+
+
+[10/11/2023 20:19] mosharaf
+Is it below 100?🥲
+
+
+[10/11/2023 20:48] 0xhelium
+How many submissions ?
+
+
+[10/11/2023 21:03] tx.origin
+need that backstage role
+
+
+[10/11/2023 21:03] tx.origin
+cant wait to read up on this one
+
+
+[10/11/2023 21:04] nickjohnson
+I feel sorry for the judges
+
+
+[10/11/2023 21:05] nickjohnson
+There were a lot of good questions, but also a lot of people who fundamentally misunderstood what was going on and had some very odd ideas of what constitutes a vulnerability
+
+{Reactions}
+10_10 (12) 😹 (7) 
+
+[10/11/2023 22:23] sandnallani
+What’s the best way to check all the submitted issues?
+
+
+[10/11/2023 23:12] kaveyjoe
+668
+
+
+[10/11/2023 23:45] unclejeff4407
+based
+
+
+[10/11/2023 23:46] rouhsamad
+Wow that's a lot
+
+
+[10/11/2023 23:46] rouhsamad
+Mine probably got lost then 😆
+
+
+[10/11/2023 23:46] rouhsamad
+But the codebame was less than 668 lines tbh
+
+
+[10/11/2023 23:59] mike_bello90
+I did some tests with the hack ideas I got, but all of them was invalid, so I sent nothing jajaja 😄
+
+
+[10/12/2023 02:12] rouhsamad
+Is there a way to review submissions?
+
+
+[10/12/2023 02:13] 0xstalin
+Yea, you need backstage role
+
+
+[10/12/2023 02:14] rouhsamad
+OK thanks
+Any estimation date when the results will be public?
+
+
+[10/12/2023 02:19] shahen.0000
+Whats the requirments to get the backstage role
+
+
+[10/12/2023 02:34] coffiasd
+anyone report some H/M ?
+
+
+[10/12/2023 02:48] rouhsamad
+Could submit 2 M
+Not sure if they will be validated as M, I think they will be downgraded to low and nc
+
+{Reactions}
+👍🏻 
+
+[10/12/2023 02:54] borongod
+668 submissions on 200 sloc😂
+
+
+[10/12/2023 02:56] coffiasd
+668 include gas and L ?
+
+
+[10/12/2023 02:57] borongod
+Yes
+
+
+[10/12/2023 03:00] rouhsamad
+I am so curios to see the results specially High impact ones if there is any, it will open up a new world to my eyes and way of thinking lmao
+
+{Reactions}
+🔥 (4) 
+
+[10/12/2023 03:51] shahen.0000
+Prolly ton of duplicates
+
+
+[10/12/2023 03:55] pfapostol
+I think during the contest, I learned everything I could about the contract itself, about `ERC1155` and `ERC20Votes`. If there are any H/M here, I will be shocked.
+
+{Reactions}
+💯 (5) 
+
+[10/12/2023 04:23] 0xauditism
+I would be more shocked if there aren't H/M, it is a very rare occurence
+
+
+[10/12/2023 04:33] borongod
+M always contains something interesting
+
+
+[10/12/2023 06:46] 0xhelium
+This is wild
+
+
+[10/12/2023 07:18] tx.origin
+anyone with backstage scanning the submissions?
+
+
+[10/12/2023 07:18] tx.origin
+anything interesting?
+
+
+[10/12/2023 07:20] tx.origin
+got a cantina code if anyone can give me some insights :kewk:
+
+{Reactions}
+😄 (5) cantina 
+
+[10/12/2023 07:28] aslanbekaibimov
+what happens in Vegas stays in Vegas 😄
+
+{Reactions}
+😂 (10) 
+
+[10/12/2023 07:59] coffiasd
+At least 1 M imo
+
+
+[10/12/2023 08:01] j4x_98
+I think how many meds will be found will highly rely on what the judge considers in scope, as it also supporting other ERC20 tokens leaves a lot open for speculation on what kind of ERC20 tokens and functionalities are still in scope
+
+{Reactions}
+💯 (7) 
+
+[10/12/2023 08:36] 0xpolarzero
+And you make me realize, I was so focused on the system and the actual lines of code I could see, that I came to kind of forget the overall system it integrates in. I thought I would get back to some more abstract thinking after really understanding the system, but I eventually ended up getting sucked into invariants and very precise tests until the last minute.
+
+
+[10/12/2023 08:37] 0xpolarzero
+Definitely a ton of learnings!
+
+
+[10/12/2023 12:44] loserdavictor
+you will learn what you missed🐧 🐧
+
+
+[10/12/2023 13:26] _karanel
+My personal opinion is if there's some malicious implementation of ERC20 token that allows someone to take control of the ERC20MultiDelegate contract then it should be out of scope.
+Because at the time of deploying ERC20MultiDelegate contract the token address is set in the constructor and can't be changed later on. So that makes the particular ERC20MultiDelegate contract instance vulnerable due to the malicious ERC20 implementation. Since it can't affect genuine ERC20MultiDelegate contracts, it should be out of scope.
+
+{Reactions}
+💯 (2) 
+
+[10/12/2023 13:28] j4x_98
+Yes, malicious tokens being out of scope was also clearly defined by the sponsor. Nevertheless ERC20 is a specification which still allows for lots of different ways to implement the intended functionalities. Meaning that there are lots of non-malicious tokens that adhere to ERC20 but still have their implementation quirks.
+
+{Reactions}
+💯 (4) 
+
+[10/24/2023 00:25] sovaslava9
+Why we talk about other ERC20 tokens, if project will plan use own token, which was in repository? It caused me think, that no any other tokens will not use..
+
+
+[10/24/2023 12:18] _m4ttm
+If somebody considers reusing an audited contract they'll be aware of the potential risks of using it with another token rather than getting a false sense of security from it being audited code
+
+
+[10/24/2023 17:41] prapandey031
+This was clarified during the contest....tagging this msg for future QA help.
+
+{Reactions}
+☝️ 
+
+[10/26/2023 06:46] j4x_98
+Just saw this moved into escalations at dailywarden, anyone got an idea when we can expect results? 🙂 BTW kudos to the sponsors/judge/lookout for moving so fast!
+
+{Reactions}
+C4Keycap (3) 
+
+[10/26/2023 08:48] xariextz
+If I am not mistaken, escalations are usually open for about 72 hoours. Given that the weekend is in the middle, maybe a little longer until Monday or so. And then they have to review every escalation again
+
+{Reactions}
+🙁 (3) 
+
+[10/29/2023 13:57] 0xnirlin
+:thehell:
+
+
+[10/29/2023 16:40] j4x_98
+Maybe we get results on monday 👀
+
+
+[10/29/2023 20:17] 0xnirlin
+95% chance
+
+
+[10/29/2023 21:19] superman_i4g
+I would say 99% chance
+
+
+[10/29/2023 23:53] unclejeff4407
+even 69% perhaps
+
+{Reactions}
+thisisfine (3) 
+
+[10/30/2023 04:06] mahdirostami
+:10_10:
+
+
+[10/30/2023 07:48] 0xnirlin
+@thebrittfactor | C4 knows right percentage :dance_vibe:
+
+{Reactions}
+😂 (4) 
+
+[10/30/2023 11:30] thebrittfactor
+https://tenor.com/view/toddlers-and-tiaras-reality-smile-creepy-evil-gif-3502066
+
+{Embed}
+https://tenor.com/view/toddlers-and-tiaras-reality-smile-creepy-evil-gif-3502066
+Creepy smile
+Code4rena - ARCHIVE-Q4-2023 - ens-oct05 [1159158237325697166].txt_Files/toddlers-and-tiaras-reality-CB305.png
+
+{Reactions}
+👀 (8) 🥲 (2) 
+
+[10/30/2023 12:26] 0xnirlin
+:bongo:
+
+{Reactions}
+goose (3) 
+
+[10/30/2023 13:48] hunter_w3b
+https://tenor.com/view/frog-chill-gif-7771013229184068709
+
+{Embed}
+https://tenor.com/view/frog-chill-gif-7771013229184068709
+Code4rena - ARCHIVE-Q4-2023 - ens-oct05 [1159158237325697166].txt_Files/frog-chill-B59AB.png
+
+{Reactions}
+👍 😂 
+
+[10/30/2023 16:03] _paperparachute
+🤑 🎉  Awards for **ENS**:
+
+$2,362.30 USDC » @Dravee  
+$1,846.79 USDC » @thekmj 
+$1,840.73 USDC » @J4X 
+$1,779.62 USDC » @peakbolt 
+$1,774.19 USDC »  @Shogoki 
+$1,774.19 USDC » @xAriextz  
+$1,774.19 USDC » @squeaky_cactus 
+$1,774.19 USDC » @nirlin  
+$1,774.19 USDC » @jnforja 
+$141.51 USDC » @radev_sw 
+$111.37 USDC » @polarzero 
+$102.56 USDC » @windhustler 
+$99.29 USDC » @MrPotatoMagic 
+$93.86 USDC » @d3e4 
+$91.10 USDC » @Sathish9098 
+$85.67 USDC » @pfapostol 
+$85.67 USDC » @marchev 
+$85.67 USDC » @ihtishamsudo 
+$85.67 USDC » @rahul 
+$85.67 USDC » @0xSmartContract  
+$84.32 USDC » @Luke John  
+$78.89 USDC » @aslanbek 
+$78.89 USDC » @SovaSlava 
+$78.89 USDC » @0xhex  
+$66.54 USDC » @0x3b 
+$55.85 USDC » @MiloTruck 
+$55.85 USDC »  @Maroutis 
+$16.12 USDC » @hyh  
+$16.12 USDC » @Limbooo  
+$16.12 USDC » SBSecurity (@Blckhv, @Slavcheww) 
+$10.69 USDC » @ABA 
+$10.69 USDC » @0xnev 
+$10.69 USDC » @asui 
+$10.69 USDC »  @Bulletprime 
+$10.69 USDC »  @inzinko 
+$10.69 USDC » @ro1sharkm  
+$8.19 USDC » @K42 Ψ  
+$8.19 USDC »  @danb 
+$8.19 USDC »  MatricksDeCoder
+$8.19 USDC »  @JCK 
+$8.19 USDC » @hunter_w3b 
+$8.19 USDC » @0xta  
+$8.19 USDC »  @SAQ 
+$8.19 USDC » @SY_S  
+$5.43 USDC »  @Tadev 
+$5.43 USDC » @ZanyBonzy 
+$5.43 USDC » @rvierdiiev 
+$5.43 USDC »  @Bauchibred 
+$5.43 USDC »  @adam-idarrha 
+$5.43 USDC » @btk 
+$5.43 USDC » 33BYTEZZZ (@zuhaibmohd, @33audits, @hexbyte) 
+$5.43 USDC » @nmirchev8  
+$5.43 USDC » @Chom 
+$5.43 USDC » @adriro 
+
+🏁 Findings summary
+--------------------------------------—
+High risk findings: 0
+Med risk findings: 1 unique (9 total)
+Gas reports: 15 total (Best: @windhustler) 
+QA reports: 24 total (Best: @thekmj) 
+Advanced anaylsis reports: 21 total (Best: @polarzero) 
+
+Awards will be distributed on Polygon within the next week. Congratulations all!  💸 💸 💸
+
+*Note: If you participated in this audit and don’t see your name on this list, please wait until the report is published and the findings repo is made public to check on your submissions.*
+
+{Reactions}
+🚀 (8) 
+
+[10/30/2023 16:07] blckhv
+I'll just leave that here
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - ens-oct05 [1159158237325697166].txt_Files/Screenshot_2023-10-30_at_18.07.16-B7162.png
+
+{Reactions}
+👍 (6) 
+
+[10/30/2023 16:09] j4x_98
+GG guys, once again a lot of fun 🙂
+
+
+[10/30/2023 16:17] j4x_98
+@PaperParachute | C4  Do we know when the mitigation review will take place? 🙂
+
+
+[10/30/2023 16:18] thekmj
+Wow my new record placement
+
+{Reactions}
+🎉 (6) 
+
+[10/30/2023 16:18] j4x_98
+Congrats 🙂
+
+
+[10/30/2023 16:18] thekmj
+Thank you XD I just got back to serious auditing recently, what a start
+
+
+[10/30/2023 16:19] j4x_98
+Well then 2nd place is a nice start bonus haha
+
+
+[10/30/2023 16:22] _paperparachute
+It'll be announced in RSVP as usual 😉
+
+{Reactions}
+🎉 (2) 
+
+[10/30/2023 16:33] t1moh
+What is the purpose for protocol to run mitigation review?
+
+
+[10/30/2023 16:33] 0xnirlin
+To prevent introducing new bugs in fixes :code4rena:
+
+
+[10/30/2023 16:33] 0xnirlin
+Good
+
+
+[10/30/2023 16:33] t1moh
+I mean in this case
+
+
+[10/30/2023 16:34] 0xnirlin
+Replace transferfrom with safetransferfrom:KEKgif:
+
+{Reactions}
+🧠 (7) 😄 (4) 
+
+[10/30/2023 16:34] 0xnirlin
+Mitigation done, gib me 7k
+
+{Reactions}
+😂 (12) 
+
+[10/30/2023 16:37] raihan3727
+https://tenor.com/view/the-aristocats-marie-sigh-sad-cat-gif-17285942866850726620
+
+{Embed}
+https://tenor.com/view/the-aristocats-marie-sigh-sad-cat-gif-17285942866850726620
+Code4rena - ARCHIVE-Q4-2023 - ens-oct05 [1159158237325697166].txt_Files/the-aristocats-marie-C1C8B.png
+
+
+[10/30/2023 16:44] superman_i4g
+@nirlin check your DM
+
+
+[10/30/2023 16:44] 0xnirlin
+Ok
+
+
+[10/30/2023 16:45] asui0944
+Guys what was the medium finding?
+
+
+[10/30/2023 16:48] theshogoki
+Great. Didn´t expect that. 
+Actually my first 4 figure payout on C4
+
+{Reactions}
+🎉 (6) dance_vibe (6) 
+
+[10/30/2023 16:50] j4x_98
+I think we are still not allowed to disclose until report 😕
+
+{Reactions}
+👍 (3) 
+
+[10/30/2023 16:53] tadev0
+sorry for the newbie question : 
+
+what does this mean?
+Med risk findings: 1 unique (9 total)
+
+Does it mean there were 9 medium findings, with one unique?
+
+
+[10/30/2023 16:54] theshogoki
+It means there was 1 Medium finding, which got reported by 9 Wardens
+
+{Reactions}
+✅ (2) 
+
+[10/30/2023 16:55] tadev0
+thanks. the ''unique'' word is misleading
+
+
+[10/30/2023 17:15] fktworld
+Can you tell me why I didn‘t pass? This is my first time to participate. @PaperParachute | C4
+
+
+[10/30/2023 17:30] 0xpolarzero
+Can't wait for the report to come out.
+
+If this is just that `transferFrom` return value not checked, I'll be frustrated because there is something I didn't understand from the disputed issues.
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - ens-oct05 [1159158237325697166].txt_Files/image-16053.png
+
+
+[10/30/2023 17:32] 0xpolarzero
+Although now I realize that "Disputed issues" might not mean "Do not report these as they were flagged as invalid after the bot reports" 🥲
+
+
+[10/30/2023 17:33] asui0944
+aww... f*k me !!!
+better not be transferFrom or safeTransferFrom  i wont be able to forgive myself:4739_Skeletor:
+
+
+[10/30/2023 17:33] zdravkohr
+I think these are disputed from the bot runner before he makes the final submission, not by the judge.
+
+
+[10/30/2023 17:34] 0xpolarzero
+Ok, well now I know, a good lesson to learn! 😭
+
+{Reactions}
+👍 (2) 
+
+[10/30/2023 17:38] 0xnirlin
+:PepeFacepalm:
+
+{Reactions}
+😶‍🌫️ (2) 
+
+[10/30/2023 17:43] josephdara
+It's quite interesting that the bug was validated
+
+
+[10/30/2023 17:45] josephdara
+Message from a judge regarding a similar situation 
+https://discord.com/channels/810916927919620096/810916927919620099/1144591647867416677
+
+
+[10/30/2023 17:48] josephdara
+https://discord.com/channels/810916927919620096/810916927919620099/1144591594582970508
+
+
+[10/30/2023 17:59] nishant_.323
+Where to find the submitted reports??
+
+
+[10/30/2023 18:02] _paperparachute
+Hello! You will be able to see any feedback on your findings when the repo is made public (once the report is released)
+
+
+[10/30/2023 18:18] 0xpolarzero
+Oh well... Thanks for sharing
+
+
+[10/30/2023 18:18] 0xpolarzero
+I guess we'll see then
+
+
+[10/30/2023 19:28] xariextz
+Really surprised with the result. Congrats everyone!
+
+
+[10/30/2023 21:19] rouhsamad
+Hey, when will the results be public?  Thanks
+
+
+[10/30/2023 21:22] _paperparachute
+The report normally comes out 1-2 weeks after announcements.
+
+{Reactions}
+👍 (2) 
+
+[10/31/2023 00:58] borongod
+👀
+
+
+[10/31/2023 08:30] jvorex
+congrats man @Maroutis big guns out! get em next time!
+
+{Reactions}
+👍 ethereum 
+
+[10/31/2023 09:02] maroutis
+Thanks bro ! I'll try!
+
+{Reactions}
+10_10 
+
+[11/03/2023 07:53] danb#6193
+What was the one medium issue?
+
+
+[11/05/2023 00:11] squeaky_cactus
+C4 rules include no talking about issues publicly until they the published public report  ...patience :gummy_wink:
+
+{Reactions}
+☝️ 
+
+[11/06/2023 12:56] xariextz
+What about the mitigation review?
+
+
+[11/07/2023 04:42] squeaky_cactus
+Mitigation reviews are posted in the announcement channel (interested wardens having to reply with emoji's to apply).
+
+Haven't seen any mention of when ENS' mitigation review may take place
+
+
+[11/07/2023 15:49] lsaudit
+what kind of emoji? I've never seen mitigation review, can you point to some example on the accouncement channel? Do I need to be certified to take part in mitigation reviews? Or anyone who apply can take part in?
+
+
+[11/07/2023 15:51] 0x11singh99
+only certified
+
+{Reactions}
+thankyou 
+
+[11/08/2023 00:12] squeaky_cactus
+@0x11singh99 is correct.
+
+My bad there, they are indeed on the rsvp-certified not the announcement channel (e.g. https://discord.com/channels/810916927919620096/1004448408829960383/1156194032129683556)
+
+_...to have access to that channel you need to have gone through the KYC_
+
+{Embed}
+https://discord.com/channels/810916927919620096/1004448408829960383/1156194032129683556)
+Discord - A New Way to Chat with Friends & Communities
+Discord is the easiest way to communicate over voice, video, and text.  Chat, hang out, and stay close with your friends and communities.
+
+
+[11/08/2023 08:42] xariextz
+I just got my KYC, but cannot see the cannel yet. Has the announcement been made already?
+
+
+[11/08/2023 08:47] squeaky_cactus
+No, nothing yet ...that was a link to the `Tangible Caviar Mitigation Review`,  meant as an example of the emoji fun.
+
+(Sorry if I cause any any concern without specific context for that link 🤦 )
+
+{Reactions}
+👍 (2) 
+
+[11/10/2023 18:02] rouhsamad
+Wen report, wen lambo
+
+{Reactions}
+🤣 (2) 
+
+[11/20/2023 10:13] tx.origin
+👀
+
+
+[11/20/2023 13:29] xariextz
+Any info about the mitigation review?
+
+{Reactions}
+🤷‍♂️ (2) 
+
+[11/20/2023 18:05] t1moh
+I guess there won't be mitigation with just 1 Medium
+
+
+[11/22/2023 12:26] j4x_98
+I mean they announced it in the RSVP so hopefully there'll be one 😅
+
+
+[11/22/2023 13:32] thebrittfactor
+The sponsor has decided to not proceed with a Mitigation Review.
+
+{Reactions}
+🫡 (3) 😐 (2) 
+
+[12/05/2023 15:00] 0xpolarzero
+Ahhhh
+
+
+[12/05/2023 15:00] 0xpolarzero
+So that was indeed it 😭
+
+
+[12/05/2023 15:03] 0xpolarzero
+
+
+{Attachments}
+Code4rena - ARCHIVE-Q4-2023 - ens-oct05 [1159158237325697166].txt_Files/image-1B763.png
+
+
+[12/05/2023 20:23] drdr_zz
+This contract is meant to be used with ENS token, right? If so, how is this an issue?
+
+{Reactions}
+👍 
+
+[12/06/2023 01:14] tx.origin
+https://discord.com/channels/810916927919620096/1159158237325697166/1160653235703521451
+
+not only ens
+
+
+[12/07/2023 06:27] raxhvl
+Started a thread.
+
+
+[12/07/2023 07:32] drdr_zz
+How come nobody submitted MED for FOT tokens?
+
+
+[12/07/2023 10:41] tx.origin
+pretty sure they stated that they dont expect fot tokens
+
+
+[02/24/2024 02:43] itsmetechjay
+ℹ️ This channel is pending archive.  As a result, any private threads will be permanently deleted on Saturday, 02 March 2024. Please make sure to grab anything you might need from those before then.
+
+
+[02/29/2024 22:34] itsmetechjay
+ℹ️ Reminder: this channel will be deleted in 24 hours.
+
+
+==============================================================
+Exported 543 message(s)
+==============================================================
